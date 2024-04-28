@@ -1,0 +1,21 @@
+{% extends 'tasks/base.html' %} {% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Descripcion</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in tareas %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{item.title}}</td>
+      <td>{{item.description}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
